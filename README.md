@@ -2,44 +2,64 @@
 
 
 
-## If you don't have anaconda download from here
-```bash 
-https://www.anaconda.com/download/success 
-```
-## Create a Conda environment:
+## 🛠️ Setup and Installation
 
-```bash
+### 1️⃣ Install Anaconda (if not already installed)
+If you don't have Anaconda, download and install it from here:  
+🔗 [Anaconda Download](https://www.anaconda.com/download/success)
+
+### 2️⃣ Create a Conda Environment
+```sh
 conda create -p <env_name> python=3.10 -y
 ```
-## Activate your conda environment
 
-```bash
+### 3️⃣ Activate the Conda Environment
+For **Windows**:
+```sh
 conda activate <env_path>
 ```
-- If activating on bash terminal use this command:
-
-```bash
-source activate ./<env_name> 
-```
-ELSE
-```bash
-conda activate <env_path>
+For **Linux/macOS (Bash Terminal)**:
+```sh
+source activate ./<env_name>
 ```
 
-## Create a requirement.txt file and install it
-
-```bash
+### 4️⃣ Install Dependencies
+Create a `requirements.txt` file and install all required dependencies:
+```sh
 pip install -r requirements.txt
 ```
-## Create a .env file for keeping your environment variable.
-- GROQ_API_KEY = "gsk_JOElTaKd7mCQo9bMnT4EwAHCxdFCte4EO"
-- ASTRA_DB_API_ENDPOINT = "https://a8d7297e-16b3-4020-8960-81054f731a25-us-east-2.apps.astra.datastax.com"
-- ASTRA_DB_APPLICATION_TOKEN = "AstraCS:TnEJBnBFeaIkaaZqQ:d66326e48341462f4dc2ec8922b51fc7839c140a6b95a2dc06fbeeeead40c4cd"
-- ASTRA_DB_KEYSPACE = "default_keyspace"
-- HF_TOKEN = "hf_CwWlvvzqTwzVqHabbjVpTphwW"
 
+### 5️⃣ Setup Environment Variables
+Create a `.env` file in your project directory and add the following:
+```sh
+## Only for reference ##
+GROQ_API_KEY="gskJOElTaKd7mCQo9bMnT4EwAHCxdFCte4EO"
+ASTRA_DB_API_ENDPOINT="https://8d7297e-16b3-4020-8960-81054f7a25-us-east-2.apps.astra.datastax.com"
+ASTRA_DB_APPLICATION_TOKEN="AstraCS:TnEJBnBFkaaZqQ:d66326e48341462f4dc2ec8922b51fc7839c140a6b95a2dc06fbeeeead40c4cd"
+ASTRA_DB_KEYSPACE="default_keyspace"
+HF_TOKEN="hf_CwWlvvzqTwzVqH
+jVpTphwW"
+```
 
-## Use setup.py for installing your local package.
+### 6️⃣ Install Local Package
+You can install the local package using **setup.py**:
+```sh
+python setup.py install
+```
+Alternatively, add `-e .` inside `requirements.txt` to install it automatically.
 
-- <either mention -e . inside your requirements.txt Or run python setup.py install >
+## 🚀 Usage
+Once installed, you can start the chatbot service and interact with it for personalized product recommendations based on user reviews.
+
+## 📌 Features
+- 🛒 **Personalized Recommendations** based on user reviews.
+- 🤖 **AI-powered Chatbot** for enhanced user experience.
+- 📊 **Data-driven Insights** from Flipkart reviews.
+- 🔒 **Secure API Integration** with Astra DB & Hugging Face models.
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to fork the repository, create a new branch, and submit a pull request.
+
+## 📜 License
+This project is licensed under the MIT License.
 
